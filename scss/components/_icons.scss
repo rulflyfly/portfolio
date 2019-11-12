@@ -1,0 +1,13 @@
+.intro {
+    & .next {
+        width: 2em;
+        height: 2em;
+        margin-top: auto;
+        margin-bottom: 1.5em;
+        align-self: center;
+
+        & svg {
+            fill: darken($color-select-primary, 30%);
+        }
+    }
+}

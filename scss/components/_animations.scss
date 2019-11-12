@@ -1,0 +1,64 @@
+.intro {
+    & h1 {
+        opacity: 1;
+        animation: fade 1.5s ease-out backwards;
+    }
+
+    & p:first-of-type {
+        opacity: 1;
+        animation: fade 1.5s ease-out backwards;
+        animation-delay: 2s;
+    }
+
+    & p:nth-of-type(2) {
+        opacity: 1;
+        animation: fade 1.5s ease-out backwards;
+        animation-delay: 4s;
+    }
+
+    & .next {
+        animation: fade 1.5s ease-out backwards;
+        animation-iteration-count: infinite;
+        animation-delay: 4s;
+    }
+}
+
+
+
+@keyframes fade {
+  0% { 
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes next {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+
+    25% {
+        opacity: .5;
+        transform: translateY(0%);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(10%);
+    }
+
+    75% {
+        opacity: .5;
+        transform: translateY(5%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0%);
+    }
+}
