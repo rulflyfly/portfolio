@@ -16,12 +16,134 @@
         animation-delay: 4s;
     }
 
-    & .next {
-        animation: fade 1.5s ease-out backwards;
-        animation-iteration-count: infinite;
-        animation-delay: 4s;
+    
+}
+
+ .next {
+    animation: fade 1.5s ease-out backwards;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+
+.card-slide {
+    & img {
+        visibility: visible !important;
+        @extend %card-slide;
+    }
+
+    & p {
+        visibility: visible !important;
+        @extend %card-slide;
+        animation-delay: 1s;
     }
 }
+
+.slide-first {
+    & img {
+        @extend %card-slide;
+    }
+
+    & p {
+        @extend %card-slide;
+        animation-delay: 1s;
+    }
+}
+
+.slide-second {
+    & img {
+        @extend %card-slide;
+        animation-delay: 1.5s;
+    }
+
+    & p {
+        @extend %card-slide;
+        animation-delay: 2s;
+    }
+}
+
+// .card:nth-of-type(2) {
+//     & img {
+//         @extend %card-slide;
+//         animation-delay: 1.5s;
+//     }
+
+//     & p {
+//         @extend %card-slide;
+//         animation-delay: 2s;
+//     }
+// }
+
+// .card:nth-of-type(3) {
+//     & img {
+//         @extend %card-slide;
+//         animation-delay: 2.5s;
+//     }
+
+//     & p {
+//         @extend %card-slide;
+//         animation-delay: 3s;
+//     }
+// }
+
+// .card:nth-of-type(4) {
+//     & img {
+//         @extend %card-slide;
+//         animation-delay: 3.5s;
+//     }
+
+//     & p {
+//         @extend %card-slide;
+//         animation-delay: 4s;
+//     }
+// }
+
+// .card:nth-of-type(4) {
+//     & img {
+//         @extend %card-slide;
+//         animation-delay: 4.5s;
+//     }
+
+//     & p {
+//         @extend %card-slide;
+//         animation-delay: 5s;
+//     }
+// }
+
+// .card:nth-of-type(5) {
+//     & img {
+//         @extend %card-slide;
+//         animation-delay: 5.5s;
+//     }
+
+//     & p {
+//         @extend %card-slide;
+//         animation-delay: 6s;
+//     }
+// }
+
+// .card:nth-of-type(6) {
+//     & img {
+//         @extend %card-slide;
+//         animation-delay: 6.5s;
+//     }
+
+//     & p {
+//         @extend %card-slide;
+//         animation-delay: 7s;
+//     }
+// }
+
+// .card:nth-of-type(7) {
+//     & img {
+//         @extend %card-slide;
+//         animation-delay: 7.5s;
+//     }
+
+//     & p {
+//         @extend %card-slide;
+//         animation-delay: 8s;
+//     }
+// }
 
 
 
@@ -60,5 +182,17 @@
     100% {
         opacity: 0;
         transform: translateY(0%);
+    }
+}
+
+@keyframes card {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
     }
 }
