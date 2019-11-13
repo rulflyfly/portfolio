@@ -1,11 +1,13 @@
 $(".slider").slick({
     nextArrow: $(".next"),
-    prevArrow: false,
+    prevArrow: $(".prev"),
     adaptiveHeight: true
   });
 
+  $('.prev').css('display', 'none');
+
   $('.next').on('click', () => {
-      $('.next').css('display', 'none');
+      //$('.next').css('display', 'none');
       $('.card').css('opacity', '1');
       $('.card:first-of-type').addClass('slide-first');
       $('.card:nth-of-type(2)').addClass('slide-second');

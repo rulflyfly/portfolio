@@ -37,6 +37,6 @@ body {
         line-height: 2em;
     }
 }
-a:hover {
-    color: $white !important;
+a:hover span {
+    color: $white;
 }

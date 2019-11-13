@@ -1,4 +1,4 @@
-.next {
+.next, .prev {
     width: 2em;
     height: 2em;
     margin: 0 auto 1.5em;
@@ -7,4 +7,8 @@
     & svg {
         fill: darken($color-select-primary, 30%);
     }
+}
+
+.prev {
+    transform: rotate(-180deg);
 }

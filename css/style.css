@@ -1,5 +1,8 @@
 .card-slide img, .card-slide p, .slide-first img, .slide-first p, .slide-second img, .slide-second p {
-  animation: card 1.5s ease-out backwards; }
+  animation: card 2s ease-out backwards; }
+
+.intro h1, .intro p:first-of-type, .intro p:nth-of-type(2), .next {
+  animation: fade 2s ease-out backwards; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -360,28 +363,28 @@ body {
   .card p {
     line-height: 2em; }
 
-a:hover {
-  color: #fff !important; }
+a:hover span {
+  color: #fff; }
 
 .intro h1 {
   transition: 1s;
-  opacity: 1;
-  animation: fade 1.5s ease-out backwards; }
+  opacity: 1; }
 .intro p:first-of-type {
   opacity: 1;
-  animation: fade 1.5s ease-out backwards;
-  animation-delay: 1s; }
+  animation-delay: 1.5s; }
 .intro p:nth-of-type(2) {
   opacity: 1;
-  animation: fade 1.5s ease-out backwards;
-  animation-delay: 2s; }
+  animation-delay: 3s; }
 
 .next {
-  animation: fade 1.5s ease-out backwards;
-  animation-delay: 3s; }
+  animation-delay: 4s; }
   .next svg {
     animation: next 1.5s ease-out backwards;
     animation-iteration-count: infinite; }
+
+.prev svg {
+  animation: prev 1.5s ease-out backwards;
+  animation-iteration-count: infinite; }
 
 .card-slide img {
   visibility: visible !important; }
@@ -416,6 +419,16 @@ a:hover {
   100% {
     opacity: 0;
     transform: translateX(100%); } }
+@keyframes prev {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); }
+  50% {
+    opacity: 1;
+    transform: translateX(0%); }
+  100% {
+    opacity: 0;
+    transform: translateX(100%); } }
 @keyframes card {
   0% {
     opacity: 0;
@@ -425,12 +438,15 @@ a:hover {
   100% {
     opacity: 1;
     transform: translateX(0%); } }
-.next {
+.next, .prev {
   width: 2em;
   height: 2em;
   margin: 0 auto 1.5em; }
-  .next svg {
+  .next svg, .prev svg {
     fill: #07ebfa; }
+
+.prev {
+  transform: rotate(-180deg); }
 
 .slick-arrow.slick-hidden {
   opacity: 0.3; }

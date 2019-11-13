@@ -3,32 +3,40 @@
     & h1 {
         transition: 1s;
         opacity: 1;
-        animation: fade 1.5s ease-out backwards;
+        @extend %intro-slide;
     }
 
     & p:first-of-type {
         opacity: 1;
-        animation: fade 1.5s ease-out backwards;
-        animation-delay: 1s;
+        @extend %intro-slide;
+        animation-delay: 1.5s;
     }
 
     & p:nth-of-type(2) {
         opacity: 1;
-        animation: fade 1.5s ease-out backwards;
-        animation-delay: 2s;
+        @extend %intro-slide;
+        animation-delay: 3s;
     }
 
     
 }
 
  .next {
-    animation: fade 1.5s ease-out backwards;
+    @extend %intro-slide;
     
-    animation-delay: 3s;
+    animation-delay: 4s;
     
     & svg {
         
         animation: next 1.5s ease-out backwards;
+        animation-iteration-count: infinite;
+    }
+}
+
+.prev {
+    & svg {
+        
+        animation: prev 1.5s ease-out backwards;
         animation-iteration-count: infinite;
     }
 }
@@ -85,6 +93,23 @@
 }
 
 @keyframes next {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes prev {
     0% {
         opacity: 0;
         transform: translateX(-100%);
