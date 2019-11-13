@@ -10,15 +10,7 @@
 
 .intro {
 
-    & h1 {
-    font-size: 3em;
-     
-       & span {
-           color: darken($color-select-primary, 30%);
-           font-size: 2.5rem;
-    
-       }
-    }
+   
 
     & p {
         font-size: 2em;
@@ -37,3 +29,13 @@ a {
     border: 0;
     outline: none;
 }
+
+ h1 {
+    font-size: 3em;
+     
+       & span {
+           color: darken($color-select-primary, 30%);
+           font-size: 2.5rem;
+    
+       }
+    }

@@ -37,6 +37,16 @@ body {
         line-height: 2em;
     }
 }
-a:hover span {
-    color: $white;
+
+.contact {
+    height: 100vh;
+    background: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & .social {
+        display: flex;
+        justify-content: center;
+    }
 }

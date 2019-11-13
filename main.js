@@ -1,17 +1,37 @@
+let nextClicked = false;
+
 $(".slider").slick({
     nextArrow: $(".next"),
     prevArrow: $(".prev"),
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    
   });
 
   $('.prev').css('display', 'none');
 
   $('.next').on('click', () => {
-      //$('.next').css('display', 'none');
+      if (!nextClicked) {
       $('.card').css('opacity', '1');
       $('.card:first-of-type').addClass('slide-first');
       $('.card:nth-of-type(2)').addClass('slide-second');
+    } if (nextClicked) {
+        $('.prev').css('display', 'block');
+        $('.next').css('display', 'none');
+        $('.contact h1').addClass('slide-contact');
+        $('.icon').addClass('show-icon');
+        $('.card').css('opacity', '0');
+        nextClicked = false;
+    }
   })
+
+  $('.prev').on('click', () => {
+    $('.card').css('opacity', '1');
+    $('.next').css('display', 'block');
+    $('.prev').css('display', 'none');
+    $('.contact h1').removeClass('slide-contact');
+    $('.icon').removeClass('show-icon');
+    nextClicked = true;
+    })
 
 
   $(window).scroll(function() {
@@ -27,8 +47,12 @@ $(".slider").slick({
         }
 
     });
-
+    if ($('.card:nth-of-type(7)').hasClass('card-slide')) {
+        nextClicked = true;
+    }
 });
 
 $('.on-slide').css('visibility', 'hidden');
+
+
 

@@ -12,3 +12,14 @@
 .prev {
     transform: rotate(-180deg);
 }
+
+.social {
+
+        & svg {
+            width: 2em;
+            height: 2em;
+            fill: $white;
+            margin: 1em;
+        }
+
+}

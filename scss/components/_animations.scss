@@ -77,6 +77,15 @@
     }
 }
 
+.slide-contact {
+    animation: contact 2s ease-out backwards;
+    animation-delay: .5s;
+}
+
+.show-icon {
+    animation: icon 2s ease-out backwards;
+    animation-delay: 2s;
+}
 
 @keyframes fade {
   0% { 
@@ -139,5 +148,31 @@
     100% {
       opacity: 1;
       transform: translateX(0%);
+    }
+}
+
+@keyframes contact {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+  
+      60% {
+          transform: translateY(2%);
+        }
+  
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+}
+
+@keyframes icon {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
