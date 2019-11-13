@@ -310,21 +310,30 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
-  color: #414a4f;
-  user-select: none; }
+  font-family: "Montserrat", sans-serif;
+  color: #ccc;
+  user-select: none;
+  font-weight: 300; }
 
 .intro h1 {
   font-size: 3em; }
   .intro h1 span {
-    color: #438198;
+    color: #07ebfa;
     font-size: 2.5rem; }
 .intro p {
   font-size: 2em; }
 .intro p:nth-of-type(2) {
   margin-top: 2em;
   font-size: 1.5rem;
-  color: #999999; }
+  color: #ccc; }
+
+a {
+  text-decoration: none;
+  border: 0;
+  outline: none; }
+
+body {
+  background: #000; }
 
 .wrapper {
   width: 90%;
@@ -344,71 +353,75 @@ template {
   .card img {
     width: 100%;
     margin-bottom: 1rem;
-    border: 0.3rem solid #438198;
-    border-radius: .3em; }
+    border: 0.2rem solid #07ebfa;
+    border-radius: .1em; }
   .card span {
-    color: #438198; }
+    color: #07ebfa; }
   .card p {
     line-height: 2em; }
 
+a:hover {
+  color: #fff !important; }
+
 .intro h1 {
+  transition: 1s;
   opacity: 1;
   animation: fade 1.5s ease-out backwards; }
 .intro p:first-of-type {
   opacity: 1;
   animation: fade 1.5s ease-out backwards;
-  animation-delay: 2s; }
+  animation-delay: 1s; }
 .intro p:nth-of-type(2) {
   opacity: 1;
   animation: fade 1.5s ease-out backwards;
-  animation-delay: 4s; }
+  animation-delay: 2s; }
 
 .next {
   animation: fade 1.5s ease-out backwards;
-  animation-iteration-count: infinite;
-  animation-delay: 5s; }
+  animation-delay: 3s; }
+  .next svg {
+    animation: next 1.5s ease-out backwards;
+    animation-iteration-count: infinite; }
 
 .card-slide img {
   visibility: visible !important; }
 .card-slide p {
   visibility: visible !important;
-  animation-delay: 1s; }
+  animation-delay: .5s; }
 
 .slide-first p {
-  animation-delay: 1s; }
+  animation-delay: .5s; }
 
 .slide-second img {
-  animation-delay: 1.5s; }
+  animation-delay: 1s; }
 .slide-second p {
-  animation-delay: 2s; }
+  animation-delay: 1.5s; }
 
 @keyframes fade {
   0% {
     opacity: 0;
     transform: translateX(-100%); }
+  60% {
+    transform: translateX(2%); }
   100% {
     opacity: 1;
     transform: translateX(0%); } }
 @keyframes next {
   0% {
     opacity: 0;
-    transform: translateY(-10%); }
-  25% {
-    opacity: .5;
-    transform: translateY(0%); }
+    transform: translateX(-100%); }
   50% {
     opacity: 1;
-    transform: translateY(10%); }
-  75% {
-    opacity: .5;
-    transform: translateY(5%); }
+    transform: translateX(0%); }
   100% {
     opacity: 0;
-    transform: translateY(0%); } }
+    transform: translateX(100%); } }
 @keyframes card {
   0% {
     opacity: 0;
     transform: translateX(100%); }
+  60% {
+    transform: translateX(-2%); }
   100% {
     opacity: 1;
     transform: translateX(0%); } }
@@ -417,7 +430,7 @@ template {
   height: 2em;
   margin: 0 auto 1.5em; }
   .next svg {
-    fill: #438198; }
+    fill: #07ebfa; }
 
 .slick-arrow.slick-hidden {
   opacity: 0.3; }

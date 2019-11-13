@@ -1,3 +1,7 @@
+body {
+    background: $black;
+}
+
 .wrapper {
     width: 90%;
     margin: 0 auto;
@@ -19,8 +23,10 @@
     & img {
         width: 100%;
         margin-bottom: 1rem;
-        border: .3rem solid darken($color-select-primary, 30%);
-        border-radius: .3em;
+        border: .2rem solid darken($color-select-primary, 30%);
+        border-radius: .1em;
+
+       
     }
 
     & span {
@@ -30,4 +36,7 @@
     & p {
         line-height: 2em;
     }
+}
+a:hover {
+    color: $white !important;
 }

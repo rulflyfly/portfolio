@@ -1,5 +1,6 @@
 $(".slider").slick({
     nextArrow: $(".next"),
+    prevArrow: false,
     adaptiveHeight: true
   });
 
@@ -28,3 +29,4 @@ $(".slider").slick({
 });
 
 $('.on-slide').css('visibility', 'hidden');
+
