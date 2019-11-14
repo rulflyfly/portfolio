@@ -4,6 +4,10 @@ $(".slider").slick({
     nextArrow: $(".next"),
     prevArrow: $(".prev"),
     adaptiveHeight: true,
+    dots:!0,
+    graggable: false,
+    swipe: false,
+    swipeToSlide: false,
     
   });
 
