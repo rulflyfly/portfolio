@@ -376,14 +376,20 @@ body {
     width: 100%;
     margin-bottom: 1rem;
     border: 0.2rem solid #07ebfa;
-    border-radius: .1em; }
+    border-radius: .1em;
+    transition: 1s; }
+    .card img:hover {
+      transform: scale(1.05); }
   .card span {
-    color: #07ebfa; }
+    color: #07ebfa;
+    padding-bottom: .3rem; }
+    .card span:hover {
+      border-bottom: 1px solid #07ebfa; }
   .card p {
     line-height: 2em; }
   @media (min-width: 768px) {
     .card {
-      max-width: unset; } }
+      max-width: 20rem; } }
 
 .contact {
   height: 100vh;

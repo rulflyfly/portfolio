@@ -30,12 +30,22 @@ body {
         margin-bottom: 1rem;
         border: .2rem solid darken($color-select-primary, 30%);
         border-radius: .1em;
+        transition: 1s;
 
+        &:hover {
+            transform: scale(1.05);
+        }
        
     }
 
     & span {
         color: darken($color-select-primary, 30%);
+        padding-bottom: .3rem;
+
+       &:hover {
+           border-bottom: 1px solid darken($color-select-primary, 30%);
+       }
+       
     }
 
     & p {
@@ -43,7 +53,7 @@ body {
     }
 
     @include mq($brk-m) {
-        max-width: unset;
+        max-width: 20rem;
     }
 }
 
