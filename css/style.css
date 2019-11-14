@@ -336,6 +336,20 @@ h1 {
     color: #07ebfa;
     font-size: 2.5rem; }
 
+@media (min-width: 768px) {
+  .contact h1 {
+    text-align: center; } }
+
+@media (min-width: 768px) {
+  .work {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr); } }
+@media (min-width: 1024px) {
+  .work {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr); } }
+
 body {
   background: #000; }
 
@@ -347,12 +361,16 @@ body {
   height: 90vh;
   display: flex;
   flex-direction: column; }
+  @media (min-width: 768px) {
+    .intro {
+      justify-content: center; } }
 
 .card {
   opacity: 0;
   padding: 1em;
   margin: 2em auto;
   width: 90%;
+  max-width: 26rem;
   text-align: center; }
   .card img {
     width: 100%;
@@ -363,6 +381,9 @@ body {
     color: #07ebfa; }
   .card p {
     line-height: 2em; }
+  @media (min-width: 768px) {
+    .card {
+      max-width: unset; } }
 
 .contact {
   height: 100vh;

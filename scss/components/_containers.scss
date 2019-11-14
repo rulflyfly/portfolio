@@ -11,6 +11,10 @@ body {
     height: 90vh;
     display: flex;
     flex-direction: column;
+
+    @include mq ($brk-m) {
+        justify-content: center;
+    }
 }
 
 .card {
@@ -18,6 +22,7 @@ body {
     padding: 1em;
     margin: 2em auto;
     width: 90%;
+    max-width: 26rem;
     text-align: center;
 
     & img {
@@ -36,6 +41,10 @@ body {
     & p {
         line-height: 2em;
     }
+
+    @include mq($brk-m) {
+        max-width: unset;
+    }
 }
 
 .contact {
@@ -50,3 +59,4 @@ body {
         justify-content: center;
     }
 }
+

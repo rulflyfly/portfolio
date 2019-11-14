@@ -39,3 +39,11 @@ a {
     
        }
     }
+
+.contact {
+    & h1 {
+        @include mq ($brk-m) {
+            text-align: center;
+        }
+    }
+}
