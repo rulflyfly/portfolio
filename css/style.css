@@ -509,7 +509,10 @@ body {
   width: 2em;
   height: 2em;
   fill: #fff;
-  margin: 1em; }
+  margin: 1em;
+  transition: .5s; }
+  .social svg:hover {
+    transform: scale(1.1); }
 
 .slick-arrow.slick-hidden {
   opacity: 0.3; }

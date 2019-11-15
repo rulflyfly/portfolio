@@ -20,6 +20,11 @@
             height: 2em;
             fill: $white;
             margin: 1em;
+            transition: .5s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
 
 }
